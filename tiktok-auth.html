@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>TikTok 授權回調 — 100KWhys</title>
+<style>body{font-family:system-ui,sans-serif;max-width:720px;margin:40px auto;padding:0 16px;line-height:1.6;color:#222}code{display:block;font-size:20px;background:#f2f2f2;padding:16px;border-radius:8px;word-break:break-all;margin:16px 0}</style>
+</head>
+<body>
+<h1>TikTok 授權碼</h1>
+<p>請把下面這串授權碼完整複製下來，發給 888：</p>
+<code id="code">(讀取中…)</code>
+<p>這串碼只用於把發佈工具連接到您自己的 TikTok 帳號，幾分鐘內有效。</p>
+<script>
+var p = new URLSearchParams(location.search);
+var c = p.get('code') || p.get('error') || '(沒有收到授權碼，請返回上一步重試)';
+document.getElementById('code').textContent = c;
+</script>
+</body>
+</html>
