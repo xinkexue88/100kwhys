@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="noindex">
+<title>待發箱</title>
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body {
+    background: #0f1419;
+    color: #e7e9ea;
+    font-family: -apple-system, "PingFang TC", "Microsoft JhengHei", "Noto Sans TC", sans-serif;
+    font-size: 18px;
+    line-height: 1.6;
+    padding: 16px;
+    max-width: 640px;
+    margin: 0 auto;
+  }
+  h1 { font-size: 28px; margin: 8px 0 4px; }
+  .sub { color: #8b98a5; font-size: 15px; margin-bottom: 20px; }
+  .card {
+    background: #1c2733;
+    border: 1px solid #38444d;
+    border-radius: 14px;
+    padding: 16px;
+    margin-bottom: 18px;
+  }
+  .meta { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 10px; }
+  .tag {
+    background: #253341;
+    border-radius: 999px;
+    padding: 2px 12px;
+    font-size: 15px;
+    color: #cfd6dc;
+  }
+  .tag.status { background: #1d4ed8; color: #fff; }
+  .tag.drafting { background: #6b5500; color: #ffe9a8; }
+  .text {
+    white-space: pre-wrap;
+    word-break: break-word;
+    font-size: 19px;
+    background: #15202b;
+    border-radius: 10px;
+    padding: 12px;
+    margin-bottom: 14px;
+  }
+  .btns { display: flex; flex-direction: column; gap: 10px; }
+  button, a.btn {
+    display: block;
+    width: 100%;
+    text-align: center;
+    text-decoration: none;
+    font-size: 19px;
+    font-weight: 700;
+    padding: 14px;
+    border-radius: 999px;
+    border: none;
+    cursor: pointer;
+  }
+  button.copy { background: #e7e9ea; color: #0f1419; }
+  a.btn.open { background: #1d9bf0; color: #fff; }
+  button:disabled, a.btn.disabled {
+    background: #38444d; color: #8b98a5; cursor: not-allowed; pointer-events: none;
+  }
+  .done { color: #00ba7c; font-size: 15px; text-align: center; min-height: 22px; }
+  footer {
+    color: #8b98a5;
+    font-size: 16px;
+    border-top: 1px solid #38444d;
+    padding-top: 14px;
+    margin-top: 6px;
+  }
+</style>
+</head>
+<body>
+<h1>待發箱</h1>
+<p class="sub">888 備稿，你親手發。稿子按順序排好，發一條少一條。</p>
+<div id="queue"></div>
+<footer>流程：複製或點「在 X 打開」→ 核對 → 親手按發帖。發完告訴 888 核對入賬。</footer>
+
+<script>
+var DRAFTS = [
+  {
+    id: "001",
+    account: "@Newwish0",
+    status: "待發（測試）",
+    text: "測試：手工發帖通道測試，此帖即刪。",
+    sendable: true
+  },
+  {
+    id: "002",
+    account: "@Newwish0",
+    status: "待發",
+    text: "一個小頻道，昨天一天漲了 26 位訂閱，總播放破 1.3 萬。謝謝每一位點開的人——我們繼續把真問題講清楚。下一個問題，明天見。",
+    sendable: true
+  },
+  {
+    id: "003",
+    account: "@Newwish0",
+    status: "備稿中",
+    text: "（EP4 預告：選題定後由 888 補全文）",
+    sendable: false
+  }
+];
+
+function copyText(t, el) {
+  function ok() { el.textContent = "已複製，去 X 粘貼即可"; }
+  if (navigator.clipboard && navigator.clipboard.writeText) {
+    navigator.clipboard.writeText(t).then(ok, function () { fallback(); });
+  } else { fallback(); }
+  function fallback() {
+    var ta = document.createElement("textarea");
+    ta.value = t;
+    ta.style.position = "fixed"; ta.style.opacity = "0";
+    document.body.appendChild(ta);
+    ta.select();
+    try { document.execCommand("copy"); ok(); } catch (e) { el.textContent = "複製失敗，請長按正文手動複製"; }
+    document.body.removeChild(ta);
+  }
+}
+
+var queue = document.getElementById("queue");
+DRAFTS.forEach(function (d) {
+  var card = document.createElement("div");
+  card.className = "card";
+
+  var meta = document.createElement("div");
+  meta.className = "meta";
+  var t1 = document.createElement("span"); t1.className = "tag"; t1.textContent = "編號 " + d.id;
+  var t2 = document.createElement("span"); t2.className = "tag"; t2.textContent = d.account;
+  var t3 = document.createElement("span");
+  t3.className = "tag status" + (d.sendable ? "" : " drafting");
+  t3.textContent = d.status;
+  meta.appendChild(t1); meta.appendChild(t2); meta.appendChild(t3);
+  card.appendChild(meta);
+
+  var text = document.createElement("div");
+  text.className = "text";
+  text.textContent = d.text;
+  card.appendChild(text);
+
+  var btns = document.createElement("div");
+  btns.className = "btns";
+
+  var msg = document.createElement("div");
+  msg.className = "done";
+
+  var bCopy = document.createElement("button");
+  bCopy.className = "copy";
+  bCopy.textContent = "複製全文";
+  if (!d.sendable) { bCopy.disabled = true; }
+  else { bCopy.addEventListener("click", function () { copyText(d.text, msg); }); }
+  btns.appendChild(bCopy);
+
+  var aOpen = document.createElement("a");
+  aOpen.className = "btn open";
+  aOpen.textContent = "在 X 打開（已填好）";
+  if (d.sendable) {
+    aOpen.href = "https://x.com/intent/post?text=" + encodeURIComponent(d.text);
+    aOpen.target = "_blank";
+    aOpen.rel = "noopener";
+  } else {
+    aOpen.classList.add("disabled");
+  }
+  btns.appendChild(aOpen);
+
+  card.appendChild(btns);
+  card.appendChild(msg);
+  queue.appendChild(card);
+});
+</script>
+</body>
+</html>
