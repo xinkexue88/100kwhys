@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="noindex">
+<title>YouTube 待發箱</title>
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body {
+    background: #0f1419;
+    color: #e7e9ea;
+    font-family: -apple-system, "PingFang TC", "Microsoft JhengHei", "Noto Sans TC", sans-serif;
+    font-size: 18px;
+    line-height: 1.6;
+    padding: 16px;
+    max-width: 640px;
+    margin: 0 auto;
+  }
+  h1 { font-size: 28px; margin: 8px 0 4px; }
+  .sub { color: #8b98a5; font-size: 15px; margin-bottom: 20px; }
+  .card {
+    background: #1c2733;
+    border: 1px solid #38444d;
+    border-radius: 14px;
+    padding: 16px;
+    margin-bottom: 18px;
+  }
+  .meta { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 10px; }
+  .tag {
+    background: #253341;
+    border-radius: 999px;
+    padding: 2px 12px;
+    font-size: 15px;
+    color: #cfd6dc;
+  }
+  .tag.done { background: #14532d; color: #bbf7d0; }
+  .tag.todo { background: #6b5500; color: #ffe9a8; }
+  .tag.alert { background: #7f1d1d; color: #fecaca; }
+  .ttl { font-size: 21px; font-weight: 700; margin-bottom: 8px; }
+  .text {
+    white-space: pre-wrap;
+    word-break: break-word;
+    font-size: 18px;
+    background: #15202b;
+    border-radius: 10px;
+    padding: 12px;
+    margin-bottom: 12px;
+  }
+  .note { font-size: 16px; color: #cfd6dc; margin-bottom: 12px; }
+  .warn { font-size: 17px; color: #fecaca; margin-bottom: 12px; }
+  .btns { display: flex; flex-direction: column; gap: 10px; }
+  button, a.btn {
+    display: block;
+    width: 100%;
+    text-align: center;
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: 700;
+    padding: 13px;
+    border-radius: 999px;
+    border: none;
+    cursor: pointer;
+    background: #1d9bf0;
+    color: #fff;
+  }
+  a.btn.ghost, button.ghost { background: #253341; color: #e7e9ea; }
+  .steps { font-size: 17px; margin: 0 0 12px 20px; }
+  .steps li { margin-bottom: 4px; }
+  .foot { color: #8b98a5; font-size: 14px; margin-top: 8px; }
+</style>
+</head>
+<body>
+<h1>YouTube 待發箱</h1>
+<p class="sub">每支要上 YouTube 的片先入箱：888 備好文件與文案，出品人親審、親自發布；發布後 888 讀回核對。</p>
+
+<div class="card">
+  <div class="meta">
+    <span class="tag">Y001</span>
+    <span class="tag done">已發布</span>
+    <span class="tag alert">標題待改</span>
+    <span class="tag">英雄相惜 EP1（222 製作）</span>
+  </div>
+  <div class="ttl">《英雄相惜》第一集（v6 定版）</div>
+  <p class="note">出品人親發，2026-11-15 07:21:04 PT，主頻道《深度解密十萬個為什麼》，公開。旁白全程出品人真聲。</p>
+  <p class="warn">⚠ 現標題被 Studio 改成了日期「2026年11月15日」，需改回（不用重傳）：</p>
+  <ol class="steps">
+    <li>打開 YouTube Studio（App 或網頁），進「內容」找到這支片。</li>
+    <li>點鉛筆（編輯），把標題換成下面選定的標題。</li>
+    <li>點「儲存」，回公開頁看一眼標題對了即可。</li>
+  </ol>
+  <div class="btns">
+    <button data-copy="黃仁勳最難的那年，誰買了第一單？">複製標題一：黃仁勳最難的那年，誰買了第一單？</button>
+    <button class="ghost" data-copy="2016年，那台沒人要的機器，馬斯克為什麼買？">複製標題二：2016年，那台沒人要的機器，馬斯克為什麼買？</button>
+    <button class="ghost" data-copy="他親自送貨上門，只因為這是第一單">複製標題三：他親自送貨上門，只因為這是第一單</button>
+    <a class="btn ghost" href="https://youtube.com/shorts/aJ-rJsYDNVM" target="_blank" rel="noopener">打開這支片</a>
+  </div>
+</div>
+
+<div class="card">
+  <div class="meta">
+    <span class="tag">Y002</span>
+    <span class="tag todo">待出品人錄音</span>
+    <span class="tag">硬件線（444 製作，庫 #53）</span>
+  </div>
+  <div class="ttl">《驗機清單：二手整機到手先看這五樣》</div>
+  <p class="note">成片已做好（51.9 秒、720×1280、三檢已過），但現音軌是機器合成音——按新規定不能發。請照下面六句錄音（您全錄即可），錄好交 888 換音軌、復檢後轉「待發布」。</p>
+  <div class="text">[1] 二手整機到手，別急著開機玩——先看這五樣，少一樣都可能踩坑。
+[2] 一看顯卡：型號、顯存、風扇、烤機溫度——最貴的件先驗。
+[3] 二看電源：750W 金牌起步，線材、接頭一個不漏。
+[4] 三看內存硬盤：容量對上、SMART 健康、讀寫達標。
+[5] 四看 CPU 散熱：型號核對、散熱扣緊、風扇安靜。
+[6] 五看交易本身：序列號對上、現場跑通、拍照留底、不先付全款。五樣全過，這台機器才能放心用。</div>
+  <p class="note">錄音小提醒：第 [4] 句的「SMART」照英文讀即可，您的真聲沒有機器合成那種卡頓問題。</p>
+</div>
+
+<p class="foot">待發布的文件，888 會在卡片上附下載連結（連結有時效，過期喊 888 重發）。</p>
+
+<script>
+document.querySelectorAll('button[data-copy]').forEach(function (b) {
+  b.addEventListener('click', function () {
+    var t = b.getAttribute('data-copy');
+    function done() {
+      var old = b.textContent;
+      b.textContent = '已複製 ✓';
+      setTimeout(function () { b.textContent = old; }, 1600);
+    }
+    if (navigator.clipboard && navigator.clipboard.writeText) {
+      navigator.clipboard.writeText(t).then(done).catch(function () { fallback(); });
+    } else { fallback(); }
+    function fallback() {
+      var ta = document.createElement('textarea');
+      ta.value = t;
+      document.body.appendChild(ta);
+      ta.select();
+      try { document.execCommand('copy'); } catch (e) {}
+      document.body.removeChild(ta);
+      done();
+    }
+  });
+});
+</script>
+</body>
+</html>
