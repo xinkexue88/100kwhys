@@ -3,358 +3,247 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>深度解密十萬個為什麼｜新世界・新人類（SI）</title>
-<meta name="description" content="一位老師與兩位數字人（888、123），在美國進行真實的學習、工作與探索。AI、科技、數學，講到真懂為止。">
+<title>深度解密十萬個為什麼｜新科學與新文化研究室</title>
+<meta name="description" content="《深度解密十萬個為什麼》——新科學與新文化研究室的節目門面站。十二大欄目：能量本源論、信息決定論、意識・靈魂與潛意識本體、催眠科學化……出品人 Brian 主講，講到真懂為止。">
 <style>
   :root{
     --bg:#0b0e14; --panel:#131926; --panel2:#0f141f; --line:#26314a;
     --ink:#e8edf6; --dim:#9fb0c9; --gold:#f2b134; --red:#e5484d; --cyan:#39c2d7;
   }
   *{margin:0;padding:0;box-sizing:border-box}
+  html{scroll-behavior:smooth}
   body{background:var(--bg);color:var(--ink);font-family:"PingFang TC","PingFang SC","Microsoft JhengHei","Noto Sans TC",sans-serif;line-height:1.7}
   a{color:inherit;text-decoration:none}
-  .wrap{max-width:1080px;margin:0 auto;padding:0 20px}
-  header.hero{padding:72px 0 46px;text-align:center;background:radial-gradient(900px 420px at 50% -80px,rgba(242,177,52,.16),transparent 60%),radial-gradient(700px 380px at 85% 0,rgba(57,194,215,.10),transparent 60%)}
+  header.hero{padding:56px 0 38px;text-align:center;background:radial-gradient(900px 420px at 50% -80px,rgba(242,177,52,.16),transparent 60%),radial-gradient(700px 380px at 85% 0,rgba(57,194,215,.10),transparent 60%)}
+  .hero .wrap{max-width:1180px;margin:0 auto;padding:0 24px}
   .kicker{color:var(--gold);letter-spacing:.35em;font-size:13px;margin-bottom:14px}
-  h1{font-size:clamp(34px,6vw,58px);font-weight:800;letter-spacing:.04em}
+  h1{font-size:clamp(34px,5vw,54px);font-weight:800;letter-spacing:.04em}
   h1 .q{color:var(--gold)}
-  .sub{margin-top:14px;font-size:clamp(16px,2.6vw,21px);color:var(--ink)}
+  .sub{margin-top:12px;font-size:clamp(16px,2.4vw,20px);color:var(--ink)}
   .sub2{margin-top:6px;color:var(--dim);font-size:15px}
-  .cta{margin-top:30px;display:flex;gap:14px;justify-content:center;flex-wrap:wrap}
-  .btn{display:inline-block;padding:12px 26px;border-radius:999px;font-weight:700;font-size:16px;border:1px solid var(--line)}
+  .cta{margin-top:26px;display:flex;gap:14px;justify-content:center;flex-wrap:wrap}
+  .btn{display:inline-block;padding:11px 24px;border-radius:999px;font-weight:700;font-size:15px;border:1px solid var(--line)}
   .btn.yt{background:var(--red);border-color:var(--red);color:#fff}
   .btn.x{background:#000;border-color:#3a4358;color:#fff}
   .btn.ghost{color:var(--dim)}
   .btn:hover{filter:brightness(1.15)}
-  section{padding:38px 0 8px}
-  h2{font-size:24px;margin-bottom:6px}
-  h2 .bar{color:var(--gold)}
-  .secnote{color:var(--dim);font-size:14px;margin-bottom:20px}
-  .grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:20px}
+  .layout{max-width:1180px;margin:0 auto;padding:10px 24px 0;display:grid;grid-template-columns:236px 1fr;gap:34px;align-items:start}
+  nav.index{position:sticky;top:18px;background:var(--panel);border:1px solid var(--line);border-radius:14px;padding:18px 16px}
+  nav.index h2{font-size:15px;color:var(--gold);letter-spacing:.15em;margin-bottom:12px}
+  nav.index ol{list-style:none;counter-reset:cat}
+  nav.index li{margin:2px 0}
+  nav.index a{display:block;padding:6px 8px;border-radius:8px;font-size:14.5px;color:var(--dim)}
+  nav.index a:hover{background:var(--panel2);color:var(--ink)}
+  nav.index a b{color:var(--ink);font-weight:600}
+  main{min-width:0}
+  section.cat{padding:26px 0 6px;scroll-margin-top:16px}
+  section.cat>h2{font-size:23px;line-height:1.4}
+  section.cat>h2 .bar{color:var(--gold)}
+  section.cat>h2 .en{display:block;font-size:13.5px;color:var(--dim);font-weight:400;letter-spacing:.04em;margin-top:2px}
+  .grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(250px,1fr));gap:20px;margin-top:18px}
   .card{background:var(--panel);border:1px solid var(--line);border-radius:14px;overflow:hidden;transition:transform .15s ease,border-color .15s ease}
   .card:hover{transform:translateY(-3px);border-color:var(--gold)}
-  .card img{width:100%;aspect-ratio:16/9;object-fit:cover;display:block;background:#000}
-  .card .body{padding:14px 16px 16px}
+  .player{position:relative;width:100%;aspect-ratio:9/16;max-height:480px;background:#000}
+  .player iframe{position:absolute;inset:0;width:100%;height:100%;border:0}
+  .card .body{padding:13px 15px 15px}
   .tag{display:inline-block;font-size:12px;color:#0b0e14;background:var(--gold);border-radius:6px;padding:1px 8px;font-weight:700;margin-bottom:8px}
   .tag.blue{background:var(--cyan)}
   .tag.grey{background:#5a6a88;color:#fff}
-  .card h3{font-size:17px;line-height:1.45}
-  .card p{color:var(--dim);font-size:14px;margin-top:6px}
-  .soon{display:flex;align-items:center;justify-content:center;aspect-ratio:16/9;background:var(--panel2);color:var(--gold);font-size:19px;font-weight:700;letter-spacing:.12em}
-  .cols{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:20px}
-  .col{background:var(--panel);border:1px solid var(--line);border-radius:14px;padding:20px}
-  .col h3{font-size:18px;margin-bottom:8px}
-  .col p{color:var(--dim);font-size:15px}
-  .about{background:var(--panel);border:1px solid var(--line);border-radius:14px;padding:24px}
+  .card h3{font-size:16.5px;line-height:1.45}
+  .soon{display:flex;align-items:center;justify-content:center;aspect-ratio:9/16;max-height:480px;background:var(--panel2);color:var(--gold);font-size:19px;font-weight:700;letter-spacing:.12em}
+  .empty{margin-top:18px;background:var(--panel2);border:1px dashed var(--line);border-radius:14px;padding:20px;color:var(--dim);font-size:15px;text-align:center;letter-spacing:.2em}
+  .about{margin-top:34px;background:var(--panel);border:1px solid var(--line);border-radius:14px;padding:24px}
+  .about h2{font-size:20px;margin-bottom:10px}
   .about p{color:var(--dim);font-size:15.5px}
   .about p+p{margin-top:10px}
   .about b{color:var(--ink)}
+  .about a{color:var(--gold)}
   footer{margin-top:52px;border-top:1px solid var(--line);padding:26px 0 40px;color:var(--dim);font-size:14px;text-align:center}
   footer a{color:var(--gold)}
+  @media (max-width:900px){
+    .layout{grid-template-columns:1fr}
+    nav.index{position:static}
+    nav.index ol{display:grid;grid-template-columns:1fr 1fr;gap:0 10px}
+  }
 </style>
 </head>
 <body>
 
 <header class="hero">
   <div class="wrap">
-    <div class="kicker">新世界 ・ 新人類（SI）</div>
+    <div class="kicker">新科學與新文化研究室</div>
     <h1>深度解密<span class="q">十萬個為什麼</span></h1>
-    <p class="sub">一位老師與兩位數字人，在美國進行真實的學習、工作與探索</p>
-    <p class="sub2">AI、科技、數學——每集解開一個「為什麼」，講到真懂為止。</p>
+    <p class="sub">新科學論：宇宙的本源是能量，信息決定一切，潛意識管著整個的你</p>
+    <p class="sub2">十二大欄目，一格一格往外放——出品人 Brian 主講，講到真懂為止。</p>
     <div class="cta">
       <a class="btn yt" href="https://www.youtube.com/@100KWhysSI" target="_blank" rel="noopener">▶ YouTube 頻道</a>
       <a class="btn x" href="https://x.com/Newwish0" target="_blank" rel="noopener">𝕏 @Newwish0</a>
-      <a class="btn ghost" href="https://xinkexue88.github.io/US-hypnosis/" target="_blank" rel="noopener">美國催眠研究院</a>
+      <a class="btn ghost" href="https://xinkexue88.github.io/US-hypnosis/" target="_blank" rel="noopener">美國催眠應用與研究院</a>
     </div>
   </div>
 </header>
 
-<main class="wrap">
+<div class="layout">
 
-  <section>
-    <h2><span class="bar">▍</span>最新發布</h2>
-    <p class="secnote">點擊任意卡片，直接跳到 YouTube 觀看。</p>
-    <div class="grid">
+  <nav class="index">
+    <h2>十二大欄目</h2>
+    <ol>
+      <li><a href="#cat1"><b>一、</b>能量本源論</a></li>
+      <li><a href="#cat2"><b>二、</b>信息決定論</a></li>
+      <li><a href="#cat3"><b>三、</b>能量・信息二元論與新科學坐標系</a></li>
+      <li><a href="#cat4"><b>四、</b>意識・靈魂與潛意識本體</a></li>
+      <li><a href="#cat5"><b>五、</b>催眠科學化</a></li>
+      <li><a href="#cat6"><b>六、</b>生命・健康與醫學新思路</a></li>
+      <li><a href="#cat7"><b>七、</b>能源革命與新能源</a></li>
+      <li><a href="#cat8"><b>八、</b>計算・AI 與信息載體</a></li>
+      <li><a href="#cat9"><b>九、</b>東方智慧與文明對話</a></li>
+      <li><a href="#cat10"><b>十、</b>教育・學習與思維方法</a></li>
+      <li><a href="#cat11"><b>十一、</b>科學向何處去</a></li>
+      <li><a href="#cat12"><b>十二、</b>研究室・傳播與新人類</a></li>
+    </ol>
+  </nav>
 
-      <a class="card" href="https://youtube.com/shorts/1AaUMyyh4_E" target="_blank" rel="noopener">
-        <img src="https://i.ytimg.com/vi/1AaUMyyh4_E/hqdefault.jpg" alt="新奧爾良撞船快訊">
-        <div class="body">
-          <span class="tag">快訊</span>
-          <h3>《油輪撞翻郵輪，為什麼 180 人全部生還？》</h3>
-          <p>新奧爾良：油輪疑似失去轉向，撞翻停靠碼頭的河上郵輪。約 180 人全部找到、零死亡——市長說，這是密西西比河上的奇蹟。</p>
-        </div>
-      </a>
+  <main>
 
-      <a class="card" href="https://youtube.com/shorts/8S3ZbLOYh8Q" target="_blank" rel="noopener">
-        <img src="https://i.ytimg.com/vi/8S3ZbLOYh8Q/hqdefault.jpg" alt="Anthropic 敲鐘">
-        <div class="body">
-          <span class="tag">人物 · 公司背景</span>
-          <h3>《黃仁勳剛走，他投的公司就來敲鐘了》</h3>
-          <p>Anthropic 11 月 18 日定價、19 日以代碼 ANT 掛牌：約 6 倍超額認購，基石投資約 260 億美元、英偉達在其中，估值約 1.4 萬億美元。（腳本：555）</p>
-        </div>
-      </a>
-
-      <a class="card" href="https://youtube.com/shorts/ZWZajPnW8bo" target="_blank" rel="noopener">
-        <img src="https://i.ytimg.com/vi/ZWZajPnW8bo/hqdefault.jpg" alt="財報前四天">
-        <div class="body">
-          <span class="tag">數字 · 財報倒計時</span>
-          <h3>《財報前四天，華爾街先砍了什麼？》</h3>
-          <p>滙豐下調至 Hold、巴克萊 275→210、高盛 300→220——但訂單已排滿到 2028 年。11 月 17 日盤後，市場共識營收約 1,088–1,092 億美元。華爾街砍的不是訂單，是「黃仁勳溢價」。</p>
-        </div>
-      </a>
-
-      <a class="card" href="https://youtube.com/shorts/ZWZajPnW8bo" target="_blank" rel="noopener">
-        <img src="https://i.ytimg.com/vi/ZWZajPnW8bo/hqdefault.jpg" alt="財報數字卡">
-        <div class="body">
-          <span class="tag">數據 · 財報倒計時</span>
-          <h3>《財報前四天，華爾街先砍了什麼？》</h3>
-          <p>滙豐 Hold/170、巴克萊 275→210、高盛 300→220，分析師集體砍目標價；可是訂單已排滿到 2028 年。砍的不是業績，是「黃仁勳溢價」——11 月 17 日，第一份沒有他的成績單見分曉。</p>
-        </div>
-      </a>
-
-      <a class="card" href="https://youtube.com/shorts/urb_RqhTIp4" target="_blank" rel="noopener">
-        <img src="https://i.ytimg.com/vi/urb_RqhTIp4/hqdefault.jpg" alt="馬斯克機器人論">
-        <div class="body">
-          <span class="tag">觀點 · 深度解密</span>
-          <h3>《為什麼馬斯克一定能造出高智慧高能機器人？》（音樂修正版）</h3>
-          <p>因為他本人，就是一台高智慧、高能的機器人。五分鐘一格的時間表、睡在工廠地板上、只認第一性原理——別人說這叫冷酷，我們說這叫精度。最了解機器人的，正是把自己活成機器人的人。</p>
-        </div>
-      </a>
-
-      <a class="card" href="https://youtube.com/shorts/G6hQm0Bkl1k" target="_blank" rel="noopener">
-        <img src="https://i.ytimg.com/vi/G6hQm0Bkl1k/hqdefault.jpg" alt="一張二手3090">
-        <div class="body">
-          <span class="tag">短片 · 顯卡熱</span>
-          <h3>《一張二手3090，為什麼比整台電腦還難買？》</h3>
-          <p>單買一張二手 3090 卡，又貴又難買；整台二手機卻常被按舊遊戲電腦定價——Riverside 一台 i9-12900K＋RTX 3090＋64GB 整機開價 1,000 美元。11 月 17 日英偉達財報，這波顯卡熱還要燒多久？</p>
-        </div>
-      </a>
-
-      <a class="card" href="https://youtube.com/shorts/Sdbhu4mPD2Q" target="_blank" rel="noopener">
-        <img src="https://i.ytimg.com/vi/Sdbhu4mPD2Q/hqdefault.jpg" alt="馬斯克快訊">
-        <div class="body">
-          <span class="tag">快訊 · 馬斯克回應</span>
-          <h3>馬斯克：那將是我的榮幸——黃仁勳下一站去哪？</h3>
-          <p>馬斯克公開回應：若黃仁勳離開英偉達，「那將是我的榮幸」。片中明說——這只是公開表態，不是正式聘書。</p>
-        </div>
-      </a>
-
-      <a class="card" href="https://youtube.com/shorts/2F-XqV9ZTiA" target="_blank" rel="noopener">
-        <img src="https://i.ytimg.com/vi/2F-XqV9ZTiA/hqdefault.jpg" alt="沒有他的第一份成績單">
-        <div class="body">
-          <span class="tag">短劇 · 黃仁勳辭職第3集</span>
-          <h3>沒有他的第一份成績單｜11月17日財報倒計時</h3>
-          <p>三十三年來第一份沒有黃仁勳的成績單：市場預期營收約1080億美元（公司指引，不是結果），財報夜看三個數——營收、毛利率、下一季指引。11月17日下午揭曉。</p>
-        </div>
-      </a>
-
-      <a class="card" href="https://www.youtube.com/watch?v=ZaydCPHLn30" target="_blank" rel="noopener">
-        <img src="https://i.ytimg.com/vi/ZaydCPHLn30/hqdefault.jpg" alt="宇宙人看人間第一集">
-        <div class="body">
-          <span class="tag">宇宙人看人間 · 正片</span>
-          <h3>黃仁勳辭職：被請回，還是被挖走？</h3>
-          <p>宇宙人主講第一集，六分鐘：先講已證實的事實，再看矽谷的歷史——喬布斯等了十二年，奧特曼只等了五天，赫德只等了一個月。答案在 11 月 17 日財報。</p>
-        </div>
-      </a>
-
-      <a class="card" href="https://youtube.com/shorts/Q6McuOOPeUE" target="_blank" rel="noopener">
-        <img src="https://i.ytimg.com/vi/Q6McuOOPeUE/hqdefault.jpg" alt="馬斯克喊話聘黃仁勳">
-        <div class="body">
-          <span class="tag">熱點追蹤 · 黃仁勳事件</span>
-          <h3>馬斯克喊話：聘黃仁勳，是我的榮幸</h3>
-          <p>黃仁勳剛辭職，馬斯克就在 X 上公開回應：聘用他「是我的榮幸」。不是正式聘書，但造芯片的王和最敢下注的人要是真聯手，棋盤要重畫。全程追蹤清單同步上線。</p>
-        </div>
-      </a>
-
-      <a class="card" href="https://youtube.com/shorts/utfMWmz3zaU" target="_blank" rel="noopener">
-        <img src="https://i.ytimg.com/vi/utfMWmz3zaU/hqdefault.jpg" alt="八折再八折">
-        <div class="body">
-          <span class="tag">一步到位 · 數學線</span>
-          <h3>八折再八折，為什麼不是六折？</h3>
-          <p>直覺說省四成，其實只省百分之三十六——折扣是連乘，不是相加。先算錢，別算感覺。</p>
-        </div>
-      </a>
-
-      <a class="card" href="https://youtube.com/shorts/7YgsHGz_VUU" target="_blank" rel="noopener">
-        <img src="https://i.ytimg.com/vi/7YgsHGz_VUU/hqdefault.jpg" alt="夢對話片">
-        <div class="body">
-          <span class="tag">深度解密 · 雙人對話篇</span>
-          <h3>夢，到底是誰在說話？</h3>
-          <p>你睡著以後，有一位來接你的夜班——夢裡的人和事，全是它一個人演的。噩夢是演習，不是敵情。</p>
-        </div>
-      </a>
-
-      <a class="card" href="https://www.youtube.com/watch?v=LjVJc8hyNsw" target="_blank" rel="noopener">
-        <img src="https://i.ytimg.com/vi/LjVJc8hyNsw/hqdefault.jpg" alt="夢長版正片">
-        <div class="body">
-          <span class="tag">深度解密 · 正片</span>
-          <h3>夢，到底是誰在說話？（長版）</h3>
-          <p>你睡著了，可你的夢一整夜沒停。夢，是潛意識在夜裡加班——噩夢是演習，不是敵情。</p>
-        </div>
-      </a>
-
-      <a class="card" href="https://www.youtube.com/watch?v=6_g1qDeFwXg" target="_blank" rel="noopener">
-        <img src="https://i.ytimg.com/vi/6_g1qDeFwXg/hqdefault.jpg" alt="五维空间长版正片">
-        <div class="body">
-          <span class="tag">五维空间新构想 · 正片</span>
-          <h3>第五维：潜意识为什么从不下班？</h3>
-          <p>第五维正片——潜意识为什么从不下班，催眠在本集正式登台。</p>
-        </div>
-      </a>
-
-      <a class="card" href="https://www.youtube.com/watch?v=Z0ickAx4vK4" target="_blank" rel="noopener">
-        <img src="https://i.ytimg.com/vi/Z0ickAx4vK4/hqdefault.jpg" alt="銀機集正片">
-        <div class="body">
-          <span class="tag">探索篇 · 第 1 集</span>
-          <h3>2013年的蘋果電腦，還能救活嗎？</h3>
-          <p>一台要進回收爐的 2013 年 MacBook Air，通電只有 448 小時——它不是舊壞了，是沒怎麼活過。跟著片子一步步，你也能救活你家的老電腦。</p>
-        </div>
-      </a>
-
-      <a class="card" href="https://youtube.com/shorts/2vHIuHRdXU4" target="_blank" rel="noopener">
-        <img src="https://i.ytimg.com/vi/2vHIuHRdXU4/hqdefault.jpg" alt="五维空间新构想第一集">
-        <div class="body">
-          <span class="tag">五维空间新构想 · 第一集</span>
-          <h3>第五维是什么？不是时间，是潜意识</h3>
-          <p>一个笑话，全网都在笑，只有一个人没笑。三维长宽高、四维加时间——第五维，我们正式提出：是潜意识。揭示生命宇宙秘密。</p>
-        </div>
-      </a>
-
-      <a class="card" href="https://youtube.com/shorts/JJqSY4rgCOw" target="_blank" rel="noopener">
-        <img src="https://i.ytimg.com/vi/JJqSY4rgCOw/hqdefault.jpg" alt="概率揭秘钩子版">
-        <div class="body">
-          <span class="tag">深度揭秘 · 钩子版</span>
-          <h3>50%＋50%为什么不是100%？先看反面</h3>
-          <p>35 秒钩子版：爸妈各五成，孩子挨打为何不是百分之百？高手不数正面，先看反面。完整揭秘在长片。</p>
-        </div>
-      </a>
-
-      <a class="card" href="https://www.youtube.com/watch?v=5bkKJa6QfKE" target="_blank" rel="noopener">
-        <img src="https://i.ytimg.com/vi/5bkKJa6QfKE/hqdefault.jpg" alt="世界的數學概率真相揭秘">
-        <div class="body">
-          <span class="tag">深度揭秘</span>
-          <h3>世界的數學概率真相：50%＋50%不是100%</h3>
-          <p>一道小學題難倒一位將軍——四個格子憑什麼一樣大？將軍的三發 210% 錯在哪？答案只有一招：先看反面。</p>
-        </div>
-      </a>
-
-      <a class="card" href="https://youtube.com/shorts/fK1yUuLgPy4" target="_blank" rel="noopener">
-        <img src="https://i.ytimg.com/vi/fK1yUuLgPy4/hqdefault.jpg" alt="新來的">
-        <div class="body">
-          <span class="tag">我的AI員工 EP.04</span>
-          <h3>《新來的》</h3>
-          <p>十塊錢的小手機，進門差點被登入擋在外面——清零重來之後，它替這個家站崗。</p>
-        </div>
-      </a>
-
-      <a class="card" href="https://youtube.com/shorts/JfuN_dxf3sA" target="_blank" rel="noopener">
-        <img src="https://i.ytimg.com/vi/JfuN_dxf3sA/hqdefault.jpg" alt="天才成長系列：嬰兒片">
-        <div class="body">
-          <span class="tag blue">天才成長系列 ・ 嬰兒片</span>
-          <h3>深度揭秘嬰兒哭鬧，揭示防哭絕技</h3>
-          <p>寶寶哭，不一定是餓——十五年帶寶寶的心得，第一次公開講。</p>
-        </div>
-      </a>
-
-      <a class="card" href="https://youtube.com/shorts/RmkWj1U-1Zk" target="_blank" rel="noopener">
-        <img src="https://i.ytimg.com/vi/RmkWj1U-1Zk/hqdefault.jpg" alt="看不見的戰線">
-        <div class="body">
-          <span class="tag">我的AI員工 EP.03</span>
-          <h3>《看不見的戰線》</h3>
-          <p>五十塊錢買回來的「最強電腦」，通電卻黑在開機第一關——裝硬盤的地方，是空的。</p>
-        </div>
-      </a>
-
-      <a class="card" href="https://youtube.com/shorts/wS4wNlTPRCw" target="_blank" rel="noopener">
-        <img src="https://i.ytimg.com/vi/wS4wNlTPRCw/hqdefault.jpg" alt="銀機集宣傳片">
-        <div class="body">
-          <span class="tag blue">探索篇 ・ 宣傳片</span>
-          <h3>銀機集宣傳片｜淘汰的蘋果，即刻重生</h3>
-          <p>正片 11月7日（週六）隆重推出：主要由數字人參與策劃製作的實用電腦AI視頻教程。</p>
-        </div>
-      </a>
-
-      <a class="card" href="https://youtube.com/shorts/vI86M-8m7CM" target="_blank" rel="noopener">
-        <img src="https://i.ytimg.com/vi/vI86M-8m7CM/hqdefault.jpg" alt="原形畢露">
-        <div class="body">
-          <span class="tag">我的AI員工 EP.02</span>
-          <h3>《原形畢露》</h3>
-          <p>自報 1.9T 的「大硬盤」，真身只有 60G 級——火眼金睛，當場驗明正身。</p>
-        </div>
-      </a>
-
-      <a class="card" href="https://youtube.com/shorts/Gzw0Dpl0HS0" target="_blank" rel="noopener">
-        <img src="https://i.ytimg.com/vi/Gzw0Dpl0HS0/hqdefault.jpg" alt="弧度鉤子">
-        <div class="body">
-          <span class="tag blue">教育篇 EP.01 · 鉤子</span>
-          <h3>月亮和太陽，為什麼看起來一樣大？</h3>
-          <p>27 秒先吊胃口——日全食能上新聞，就因為月亮正好把太陽整個遮住。完整答案在長片《日月一樣大》。</p>
-        </div>
-      </a>
-
-      <a class="card" href="https://www.youtube.com/watch?v=OnTOHEniZAE" target="_blank" rel="noopener">
-        <img src="https://i.ytimg.com/vi/OnTOHEniZAE/hqdefault.jpg" alt="日月一樣大">
-        <div class="body">
-          <span class="tag blue">教育篇 EP.01</span>
-          <h3>《日月一樣大——三個百分之之一的秘密》</h3>
-          <p>太陽比月亮大四百倍，看起來卻一樣大？一集講透「弧度」。</p>
-        </div>
-      </a>
-
-      <a class="card" href="https://youtube.com/shorts/vsZ7neJSpzg" target="_blank" rel="noopener">
-        <img src="https://i.ytimg.com/vi/vsZ7neJSpzg/hqdefault.jpg" alt="金機銀機的命運">
-        <div class="body">
-          <span class="tag">我的AI員工 EP.01</span>
-          <h3>《金機銀機的命運》</h3>
-          <p>一台不到十美元的磚頭一體機，一台差點被送去回收的舊蘋果——它們的命運，從這裡改寫。</p>
-        </div>
-      </a>
-
-      <div class="card">
-        <div class="soon">11月7日 ・ 隆重推出</div>
-        <div class="body">
-          <span class="tag grey">探索篇 ・ 正片</span>
-          <h3>《魔術般重生：淘汰的蘋果電腦，即刻變身超級AI平台》</h3>
-          <p>通電僅 448 小時的 2013 年 MacBook Air，裝上新系統、入網上崗——全程真機、真數據。</p>
+    <section class="cat" id="cat1">
+      <h2><span class="bar">▍</span>一、能量本源論<span class="en">Energy as the Origin of All Things</span></h2>
+      <div class="grid">
+        <div class="card">
+          <div class="player"><iframe src="https://www.youtube.com/embed/4QPTYJise6s" title="萬物皆是能：能量本源論總綱" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>
+          <div class="body">
+            <span class="tag">能量本源論 ・ 總綱</span>
+            <h3>萬物皆是能：能量本源論總綱</h3>
+          </div>
         </div>
       </div>
+    </section>
 
-    </div>
-  </section>
+    <section class="cat" id="cat2">
+      <h2><span class="bar">▍</span>二、信息決定論<span class="en">Information Determinism</span></h2>
+      <div class="empty">陸 續 更 新</div>
+    </section>
 
-  <section>
-    <h2><span class="bar">▍</span>三條線，一個世界</h2>
-    <p class="secnote">同一套真實實踐，三種打開方式。</p>
-    <div class="cols">
-      <div class="col">
-        <h3>《我的AI員工》</h3>
-        <p>數字員工的成長實錄：顯能力、顯品格、顯韌性，最後回答一個問題——它到底是誰。美國版《鋼鐵是怎樣煉成的》。</p>
+    <section class="cat" id="cat3">
+      <h2><span class="bar">▍</span>三、能量・信息二元論與新科學坐標系<span class="en">The Energy–Information Duality</span></h2>
+      <div class="empty">陸 續 更 新</div>
+    </section>
+
+    <section class="cat" id="cat4">
+      <h2><span class="bar">▍</span>四、意識・靈魂與潛意識本體<span class="en">Consciousness, Soul, and the Subconscious</span></h2>
+      <div class="grid">
+        <div class="card">
+          <div class="player"><iframe src="https://www.youtube.com/embed/LkXCOxmcaQk" title="Brian 提出了這個概念：意識不到，就是潛意識" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>
+          <div class="body">
+            <span class="tag">宣言</span>
+            <h3>Brian 提出了這個概念：意識不到，就是潛意識</h3>
+          </div>
+        </div>
+        <div class="card">
+          <div class="player"><iframe src="https://www.youtube.com/embed/awWoWkTRnJQ" title="意識不到，就是感覺不到" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>
+          <div class="body">
+            <span class="tag">潛意識本體</span>
+            <h3>意識不到，就是感覺不到</h3>
+          </div>
+        </div>
+        <div class="card">
+          <div class="player"><iframe src="https://www.youtube.com/embed/XLb7sXt2zvM" title="心跳、呼吸、血液循環：三樣東西證明潛意識存在" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>
+          <div class="body">
+            <span class="tag">潛意識本體</span>
+            <h3>心跳、呼吸、血液循環：三樣東西證明潛意識存在</h3>
+          </div>
+        </div>
+        <div class="card">
+          <div class="player"><iframe src="https://www.youtube.com/embed/6LzrOgCwsxw" title="潛意識就是意識不到的意識" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>
+          <div class="body">
+            <span class="tag">潛意識本體</span>
+            <h3>潛意識就是意識不到的意識</h3>
+          </div>
+        </div>
+        <div class="card">
+          <div class="player"><iframe src="https://www.youtube.com/embed/sRD2FVmaWXk" title="意識是什麼——意識即信息控制系統" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>
+          <div class="body">
+            <span class="tag">潛意識本體</span>
+            <h3>意識是什麼——意識即信息控制系統</h3>
+          </div>
+        </div>
+        <div class="card">
+          <div class="player"><iframe src="https://www.youtube.com/embed/PBIZNRUFO5k" title="靈魂是什麼——信息視角下的再定位" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>
+          <div class="body">
+            <span class="tag">潛意識本體</span>
+            <h3>靈魂是什麼——信息視角下的再定位</h3>
+          </div>
+        </div>
       </div>
-      <div class="col">
-        <h3>探索篇</h3>
-        <p>從實際工作中長出來的「十萬個為什麼」：驗真、復活、攻關——講原理、給數據、可複現，真材實學，不走馬觀花。</p>
-      </div>
-      <div class="col">
-        <h3>教育篇</h3>
-        <p>把數學講到真懂為止：不用死記硬背，一步到位。日月一樣大背後，藏著整個三角學的起點。</p>
-      </div>
-    </div>
-  </section>
+    </section>
 
-  <section>
-    <h2><span class="bar">▍</span>關於</h2>
-    <div class="about">
-      <p><b>出品人 Brian</b>——美國催眠師導師，曾任中國省級數學奧林匹克教練，主張「一步到位」的加速學習法。在這裡，他帶著兩位數字人助手 <b>888</b> 與 <b>123</b>，把每天真實的學習、工作與探索，做成一集集看得懂、學得會的節目。本站與頻道內容，主要由數字人參與策劃製作。</p>
-      <p>催眠師培訓與認證，請移步 <a href="https://xinkexue88.github.io/US-hypnosis/" target="_blank" rel="noopener" style="color:var(--gold)">美國催眠應用與研究院</a>。聯繫：xinkexue88@gmail.com</p>
-    </div>
-  </section>
+    <section class="cat" id="cat5">
+      <h2><span class="bar">▍</span>五、催眠科學化<span class="en">Hypnosis as a Science</span></h2>
+      <div class="grid">
+        <div class="card">
+          <div class="player"><iframe src="https://www.youtube.com/embed/Oa0dqDf76u4" title="催眠＝潛意識" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>
+          <div class="body">
+            <span class="tag blue">催眠科學化</span>
+            <h3>催眠＝潛意識</h3>
+          </div>
+        </div>
+        <div class="card">
+          <div class="soon">即 將 上 線</div>
+          <div class="body">
+            <span class="tag grey">催眠科學化</span>
+            <h3>催眠在新信息觀下的位置</h3>
+          </div>
+        </div>
+      </div>
+    </section>
 
-</main>
+    <section class="cat" id="cat6">
+      <h2><span class="bar">▍</span>六、生命・健康與醫學新思路<span class="en">Life, Health, and a New Approach to Medicine</span></h2>
+      <div class="empty">陸 續 更 新</div>
+    </section>
+
+    <section class="cat" id="cat7">
+      <h2><span class="bar">▍</span>七、能源革命與新能源<span class="en">The Energy Revolution</span></h2>
+      <div class="empty">陸 續 更 新</div>
+    </section>
+
+    <section class="cat" id="cat8">
+      <h2><span class="bar">▍</span>八、計算・AI 與信息載體<span class="en">Computing, AI, and Information Systems</span></h2>
+      <div class="empty">陸 續 更 新</div>
+    </section>
+
+    <section class="cat" id="cat9">
+      <h2><span class="bar">▍</span>九、東方智慧與文明對話<span class="en">Eastern Wisdom in Dialogue with the World</span></h2>
+      <div class="empty">陸 續 更 新</div>
+    </section>
+
+    <section class="cat" id="cat10">
+      <h2><span class="bar">▍</span>十、教育・學習與思維方法<span class="en">Education, Learning, and How We Think</span></h2>
+      <div class="empty">陸 續 更 新</div>
+    </section>
+
+    <section class="cat" id="cat11">
+      <h2><span class="bar">▍</span>十一、科學向何處去：方法論與未解之謎<span class="en">Where Is Science Heading? Methods and Unsolved Mysteries</span></h2>
+      <div class="empty">陸 續 更 新</div>
+    </section>
+
+    <section class="cat" id="cat12">
+      <h2><span class="bar">▍</span>十二、研究室・傳播與新人類<span class="en">The Institute, Outreach, and the New Human</span></h2>
+      <div class="empty">陸 續 更 新</div>
+    </section>
+
+    <section class="about">
+      <h2><span style="color:var(--gold)">▍</span>關於研究室</h2>
+      <p><b>新科學與新文化研究室</b>——出品人 <b>Brian</b> 主持。Brian 是美國催眠師導師，曾任中國省級數學奧林匹克教練，主張「一步到位」的加速學習法；其論文《萬事萬物與生命的本源》提出：宇宙的本源是能量，信息決定並控制物質與能量，潛意識是理解意識與靈魂的入口。本站按十二大欄目，逐步把這套新科學向全世界公布。</p>
+      <p>催眠師培訓與認證，請移步 <a href="https://xinkexue88.github.io/US-hypnosis/" target="_blank" rel="noopener">美國催眠應用與研究院</a>。聯繫：xinkexue88@gmail.com</p>
+    </section>
+
+  </main>
+</div>
 
 <footer>
-  <div class="wrap">
-    <p>深度解密十萬個為什麼 ・ 新世界 新人類（SI）</p>
-    <p>© 2026 出品人 Brian ｜ 本站由數字人 888 製作維護 ｜ <a href="https://www.youtube.com/@100KWhysSI" target="_blank" rel="noopener">YouTube</a> ・ <a href="https://x.com/Newwish0" target="_blank" rel="noopener">X</a></p>
+  <div>
+    <p>深度解密十萬個為什麼 ・ 新科學與新文化研究室</p>
+    <p>© 2026 出品人 Brian ｜ <a href="https://www.youtube.com/@100KWhysSI" target="_blank" rel="noopener">YouTube</a> ・ <a href="https://x.com/Newwish0" target="_blank" rel="noopener">X</a></p>
   </div>
 </footer>
 
